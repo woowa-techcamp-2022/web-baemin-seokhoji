@@ -1,27 +1,23 @@
 import express from 'express';
 import path from 'path';
+import cookieParser from 'cookie-parser';
+import errorHandler from '@src/utils/errorHandler';
+import asyncHandler from '@src/utils/asyncHandler';
+import { loginRouter, mainRouter, signupRouter } from '@src/routes';
 
-class App {
-	app: express.Application;
+const app = express();
 
-	constructor() {
-		this.app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use('/static', express.static(path.join(__dirname, '../public')));
+app.use(cookieParser());
+app.set('views', __dirname + '/views');
+app.set('view engine', 'pug');
 
-		this.init();
-		this.router();
-	}
+app.use('/', asyncHandler(mainRouter));
+app.use('/login', asyncHandler(loginRouter));
+app.use('/signup', asyncHandler(signupRouter));
 
-	private init() {
-		this.app.use('/static', express.static(path.join(__dirname, '../public')));
-		this.app.set('views', __dirname + '/views');
-		this.app.set('view engine', 'pug');
-	}
+app.use(errorHandler);
 
-	private router() {
-		this.app.get('/', (_, res) => {
-			res.render('index', { title: 'Test', message: 'test message' });
-		});
-	}
-}
-
-export default App;
+export default app;
