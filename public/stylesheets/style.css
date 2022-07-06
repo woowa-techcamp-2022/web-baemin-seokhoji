@@ -1,0 +1,110 @@
+body {
+	background-color: #ededed;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	font-family: 'Noto Sans KR';
+}
+
+div.app {
+	width: 400px;
+	height: 800px;
+	border: 1px solid black;
+	border-radius: 8px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header > .header-icon {
+	position: absolute;
+}
+
+.current-input {
+	width: 100%;
+	padding: 12px 0;
+	font-size: 1.1em;
+	border: 0;
+	border-bottom: 1px solid rgb(226, 226, 226);
+	font-size: 0.9em;
+}
+.current-input:focus-visible {
+	border-bottom: 1px solid rgb(155, 155, 155);
+}
+
+.current-input::placeholder {
+	color: rgb(210, 210, 210);
+}
+
+.current-button {
+	width: 100%;
+	border: 0;
+	color: #fff;
+	font-size: 1.1em;
+	background-color: #bdbdbd;
+	padding: 14px;
+	border-radius: 5px;
+}
+
+.current-button.active:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.current-input:focus-visible {
+	outline: none;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.heading {
+	font-size: 20px;
+	padding: 18px 0;
+}
+
+.error-text {
+	color: red;
+}
+
+.error-bold {
+	border-bottom: 1px solid red;
+}
+
+.header > .header-prev {
+	position: absolute;
+	top: 18px;
+	left: 18px;
+}
+
+.close {
+	width: 18px;
+	height: 18px;
+}
+
+.driver {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	margin: 1rem 0;
+}
+
+.disabled-text {
+	color: rgb(161, 161, 161);
+}
+
+.active {
+	background-color: rgb(47, 182, 164);
+}

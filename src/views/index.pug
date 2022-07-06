@@ -1,0 +1,92 @@
+doctype html
+head
+  title 회원가입 서비스
+  link(rel='stylesheet', href='/static/stylesheets/reset.css', type='text/css')
+  link(rel='stylesheet', href='/static/stylesheets/style.css', type='text/css')
+  link(rel='stylesheet', href='/static/stylesheets/main.css', type='text/css')
+
+.app
+    header.header 
+      span.bold.heading My배민
+    img(src="/static/images/banner.png")
+    if username
+      a.user(href="#")  
+        .left
+          img(src="/static/images/profile.png")
+          span.user-info #{username} 님
+        span.logout 로그아웃
+    else
+      a.user(href="/login")  
+        .left
+          img(src="/static/images/profile.png")
+          span 로그인해주세요.
+        img.right(src="/static/images/arrow.png")
+
+    ul.item-box 
+      a(href="#")
+        li.item 
+          figure
+            img(src="/static/images/point.png")
+          span 포인트
+      a(href="#")
+        li.item 
+          figure
+            img(src="/static/images/coupon.png")
+          span 쿠폰
+      a(href="#")
+        li.item 
+          figure
+            img(src="/static/images/present.png")
+          span 선물함
+      a(href="#")
+        li.item 
+          figure
+            img(src="/static/images/heart.png")
+          span 찜
+      a(href="#")
+        li.item 
+          figure
+            img(src="/static/images/order.png")
+          span 주문내역
+      a(href="#")
+        li.item 
+          figure
+            img(src="/static/images/review.png")
+          span 리뷰관리
+    a(href="#")
+      .ad 
+        .left
+          img(src="/static/images/sproud.png")
+          span 일회용품 덜 쓰기, 함께해요!
+        .right 
+          img.right(src="/static/images/arrow.png")
+    ul.menu
+      a(href="#")
+        .detail
+          .title 배민페이 등록 
+            span.new_item new
+          p.desc 배민페이로 결제하면 최대 5.5%의 배민 포인트가 적립됩니다.   
+        .right 
+          img.right(src="/static/images/arrow.png")
+      a(href="#")
+        .detail
+          .title 가족계정 관리
+            span.new_item new
+          p.desc 결제수단을 공유해 우리 가족의 끼니를 챙겨주세요.  
+        .right 
+          img.right(src="/static/images/arrow.png")
+      a.single(href="#")
+        .detail
+          .title 공지사항
+        .right 
+          img.right(src="/static/images/arrow.png")
+      a.single(href="#")
+        .detail
+          .title 배민커넥트 지원 
+        .right 
+          img.right(src="/static/images/arrow.png")
+      
+      
+
+
+    

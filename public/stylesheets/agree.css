@@ -1,0 +1,136 @@
+.agree-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	padding: 18px;
+}
+
+.agree-container .current-button {
+	margin-top: auto;
+	font-size: 1.3em;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+.checkform {
+	position: relative;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	cursor: pointer;
+}
+
+.checkform:hover {
+	opacity: 0.8;
+}
+
+.checkform > img {
+	position: absolute;
+	width: 10px;
+	right: 0;
+}
+
+.input-form {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+}
+
+.mark {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	border-radius: 5px;
+	background-color: #ddd;
+}
+
+.mark::after {
+	content: '';
+	position: absolute;
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+input:checked ~ .mark {
+	background-color: rgb(47, 182, 164);
+}
+
+.mark-radio {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: #ddd;
+}
+
+.mark-radio::after {
+	content: '';
+	position: absolute;
+	left: 7px;
+	top: 7px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.checked {
+	background-color: rgb(47, 182, 164);
+}
+
+.age-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+}
+
+.age-box > .age-item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 64px;
+	padding: 12px;
+	gap: 8px;
+	border-radius: 10px;
+	background-color: #f4f4f4;
+	cursor: pointer;
+}
+
+.age-box > .age-item > .detail {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 5px;
+	font-size: 1.1em;
+}
+
+.age-box > .age-item > .detail > .desc {
+	color: #bebebe;
+	font-size: 0.8em;
+}
+
+.age-box > .age-item > img {
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.age-box > .age-item:hover {
+	opacity: 0.8;
+}

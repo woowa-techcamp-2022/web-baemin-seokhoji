@@ -1,0 +1,37 @@
+doctype html
+head
+  title=title
+  link(rel='stylesheet', href='/static/stylesheets/reset.css', type='text/css')
+  link(rel='stylesheet', href='/static/stylesheets/style.css', type='text/css')
+  link(rel='stylesheet', href='/static/stylesheets/login.css', type='text/css')
+
+.app
+  header.header
+    a.header-prev(href="/")
+      img.close(src="/static/images/close2.png")
+    span.bold.heading 로그인
+
+  form.login-container
+    input.current-input(placeholder="아이디 또는 이메일")
+    input.current-input(placeholder="비밀번호" type="password")
+    button.current-button.active 로그인
+    ul.find 
+      li
+        a(href="#") 아이디 찾기
+      li
+        a(href="#") 비밀번호 찾기
+  
+  footer
+    .signup-box 혹시, 배달의 민족이 처음이신가요?
+      a(href="/signup/agree")
+        span 회원가입
+
+
+
+      
+
+
+
+
+
+    

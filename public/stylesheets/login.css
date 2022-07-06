@@ -1,0 +1,39 @@
+.login-container {
+	margin-top: 18px;
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.find {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.find > li > a {
+	color: #939393;
+}
+
+.find > li:last-child::before {
+	padding: 0 12px;
+	color: #939393;
+	content: '|';
+	font-size: 0.6em;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #939393;
+}
+
+footer span {
+	margin-left: 8px;
+	color: rgb(47, 182, 164);
+}

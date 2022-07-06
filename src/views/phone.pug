@@ -1,0 +1,47 @@
+doctype html
+head
+  title=title
+  link(rel='stylesheet', href='/static/stylesheets/reset.css', type='text/css')
+  link(rel='stylesheet', href='/static/stylesheets/style.css', type='text/css')
+  link(rel='stylesheet', href='/static/stylesheets/phone.css', type='text/css')
+
+.app
+  header.header
+    a.header-prev(href="/")
+      img.close(src="/static/images/close2.png")
+    span.bold.heading 회원가입
+    div.next.disabled-text
+      span.bold.heading 다음
+
+  form.phone-container
+    .phone-container-item
+      p.title 휴대전화
+      .input-box
+        input.current-input(type="tel" placeholder="전화번호를 입력해주세요.")
+        img(src="/static/images/cancel-circle.png")
+    button.send-num 인증번호 받기
+    .phone-container-item
+      p.title 인증번호
+      .input-box
+        input.current-input(type="number" placeholder="인증번호를 입력해주세요.")
+        //- img(src="/static/images/cancel-circle.png")
+        span.success
+      p.refresh_num 인증번호 다시받기
+
+    
+
+
+      
+
+
+
+
+
+
+      
+
+
+
+
+
+    
