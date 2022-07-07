@@ -10,7 +10,7 @@ body {
 	font-family: 'Noto Sans KR';
 }
 
-div.app {
+div#app {
 	width: 400px;
 	height: 800px;
 	border: 1px solid black;
@@ -32,10 +32,14 @@ header > .header-icon {
 	position: absolute;
 }
 
+.input-box {
+	position: relative;
+	width: 100%;
+}
+
 .current-input {
 	width: 100%;
-	padding: 12px 0;
-	font-size: 1.1em;
+	padding: 12px 2px;
 	border: 0;
 	border-bottom: 1px solid rgb(226, 226, 226);
 	font-size: 0.9em;
@@ -46,6 +50,9 @@ header > .header-icon {
 
 .current-input::placeholder {
 	color: rgb(210, 210, 210);
+}
+.current-input:disabled {
+	background-color: rgb(222, 231, 255);
 }
 
 .current-button {
@@ -84,8 +91,9 @@ header > .header-icon {
 	border-bottom: 1px solid red;
 }
 
-.header > .header-prev {
+.header > .prev {
 	position: absolute;
+	cursor: pointer;
 	top: 18px;
 	left: 18px;
 }
@@ -107,4 +115,55 @@ header > .header-icon {
 
 .active {
 	background-color: rgb(47, 182, 164);
+}
+
+.close-input {
+	display: none;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 12px;
+	right: 2px;
+	cursor: pointer;
+}
+
+.focus > .close-input {
+	display: block;
+}
+
+.close-input:hover {
+	opacity: 0.8;
+}
+
+.success {
+	display: none;
+	position: absolute;
+	top: 11px;
+	right: 6px;
+	width: 8px;
+	height: 13px;
+	border: solid rgb(47, 182, 164);
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+.input-box:not(.focus).valid > .success {
+	display: block;
+	border: solid rgb(47, 182, 164);
+	border-width: 0 2px 2px 0;
+}
+
+.input-box.invalid input {
+	border-bottom: 1px solid red;
+}
+
+.message {
+	display: none;
+	margin-top: 10px;
+	font-size: 0.8em;
+	color: red;
+}
+
+.input-box.invalid > .message {
+	display: block;
 }

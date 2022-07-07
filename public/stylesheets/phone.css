@@ -2,6 +2,7 @@
 	position: absolute;
 	top: 18px;
 	right: 18px;
+	cursor: pointer;
 }
 
 .phone-container {
@@ -11,6 +12,14 @@
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
+}
+
+.phone-container-item > button {
+	margin-top: 40px;
+}
+
+.phone-container-item.auth-form {
+	display: none;
 }
 
 .title {
@@ -26,42 +35,9 @@ button.send-num {
 	border-radius: 8px;
 }
 
-input[type='number']::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-}
-
-.input-box {
-	position: relative;
-	width: 100%;
-}
-
-.input-box img {
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	top: 10px;
-	right: 0;
-	cursor: pointer;
-}
-.input-box img:hover {
-	opacity: 0.8;
-}
-
-.refresh_num {
+.refresh-num {
 	margin-top: 30px;
 	text-align: right;
 	color: rgb(47, 182, 164);
 	cursor: pointer;
-}
-
-.success {
-	position: absolute;
-	top: 11px;
-	right: 4px;
-	width: 8px;
-	height: 13px;
-	border: solid rgb(47, 182, 164);
-	border-width: 0 2px 2px 0;
-	transform: rotate(45deg);
 }
