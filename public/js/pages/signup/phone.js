@@ -18,6 +18,7 @@ function PhonePage($target) {
 
 	this.getRandomNumber = () => {
 		const random = Math.floor(1000 + Math.random() * 9000);
+		this.$InputBoxByAuth.setValue('');
 		setTimeout(() => {
 			this.$InputBoxByAuth.setValue(random);
 			this.$InputBoxByAuth.validate();
