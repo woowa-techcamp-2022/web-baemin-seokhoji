@@ -37,6 +37,10 @@ app.use('/login', isNotLoggedIn, asyncHandler(loginRouter));
 app.use('/signup', isNotLoggedIn, asyncHandler(signupRouter));
 app.use('/user', asyncHandler(userRouter));
 
+app.use('*', (_, __, next) => {
+	next('존재하지 않는 페이지입니다.');
+});
+
 app.use(errorHandler);
 
 module.exports = app;
