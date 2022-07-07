@@ -26,13 +26,12 @@ function InputBox($inputField, validator, parser) {
 		if (validate) {
 			$inputField.classList.add('valid');
 			$inputField.classList.remove('invalid');
+			this.toggle();
 		} else {
 			if (this.$input.value.length > 0 || $inputField.classList.contains('valid'))
 				$inputField.classList.add('invalid');
 			$inputField.classList.remove('valid');
 		}
-
-		this.toggle();
 	};
 
 	this.onDisable = () => {
