@@ -166,3 +166,13 @@ header > .header-icon {
 .input-box.invalid > .message {
 	display: block;
 }
+
+.error-page-container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 20px;
+}
