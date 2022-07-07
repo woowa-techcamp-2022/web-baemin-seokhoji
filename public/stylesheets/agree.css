@@ -18,7 +18,7 @@ input[type='radio'] {
 	opacity: 0;
 }
 
-.checkform {
+.input-box {
 	position: relative;
 	display: flex;
 	gap: 10px;
@@ -26,11 +26,11 @@ input[type='radio'] {
 	cursor: pointer;
 }
 
-.checkform:hover {
+.input-box:hover {
 	opacity: 0.8;
 }
 
-.checkform > img {
+.input-box > img {
 	position: absolute;
 	width: 10px;
 	right: 0;
@@ -62,7 +62,8 @@ input[type='radio'] {
 	transform: rotate(45deg);
 }
 
-input:checked ~ .mark {
+input:checked ~ .mark,
+input:checked ~ .mark-radio {
 	background-color: rgb(47, 182, 164);
 }
 
