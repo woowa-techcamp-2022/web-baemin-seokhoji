@@ -46,6 +46,8 @@ const validationDate = (date) => {
 	return reg.test(date);
 };
 
+const validationText = (text) => text.length > 0;
+
 export {
 	validationAuthNumber,
 	validationPassword,
@@ -53,4 +55,5 @@ export {
 	validationEmail,
 	validationNickname,
 	validationPhoneNumber,
+	validationText,
 };
