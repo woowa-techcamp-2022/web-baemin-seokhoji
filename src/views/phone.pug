@@ -5,28 +5,34 @@ head
   link(rel='stylesheet', href='/static/stylesheets/style.css', type='text/css')
   link(rel='stylesheet', href='/static/stylesheets/phone.css', type='text/css')
 
-.app
+div#app
   header.header
-    a.header-prev(href="/")
-      img.close(src="/static/images/close2.png")
+    span.prev
+      img.close(src="/static/images/arrow-left.svg")
     span.bold.heading 회원가입
     div.next.disabled-text
       span.bold.heading 다음
 
-  form.phone-container
-    .phone-container-item
+  section.phone-container
+    form.phone-container-item
       p.title 휴대전화
-      .input-box
-        input.current-input(type="tel" placeholder="전화번호를 입력해주세요.")
-        img(src="/static/images/cancel-circle.png")
-    button.send-num 인증번호 받기
-    .phone-container-item
-      p.title 인증번호
-      .input-box
-        input.current-input(type="number" placeholder="인증번호를 입력해주세요.")
-        //- img(src="/static/images/cancel-circle.png")
+      .input-box.phone
+        input.current-input(type="text" placeholder="전화번호를 입력해주세요." maxlength="13" name="phone")
+        img.close-input(src="/static/images/cancel-circle.png")
         span.success
-      p.refresh_num 인증번호 다시받기
+        p.message 전화번호 양식에 맞춰 입력해 주세요.
+      button.send-num 인증번호 받기
+
+    .phone-container-item.auth-form
+      p.title 인증번호
+      .input-box.auth
+        input.current-input.auth(type="text" placeholder="인증번호를 입력해주세요." maxlength="4" )
+        img.close-input(src="/static/images/cancel-circle.png" name="auth")
+        span.success
+      p.refresh-num 인증번호 다시받기
+
+    script(type="module" src="/static/js/pages/signup/phone.js")
+  
 
     
 
