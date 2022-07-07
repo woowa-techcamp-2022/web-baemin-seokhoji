@@ -1,6 +1,6 @@
 doctype html
 head
-  title=title
+  title 로그인
   link(rel='stylesheet', href='/static/stylesheets/reset.css', type='text/css')
   link(rel='stylesheet', href='/static/stylesheets/style.css', type='text/css')
   link(rel='stylesheet', href='/static/stylesheets/login.css', type='text/css')
@@ -11,9 +11,19 @@ head
       img.close(src="/static/images/cancel.svg")
     span.bold.heading 로그인
 
-  form.login-container
-    input.current-input(placeholder="아이디 또는 이메일")
-    input.current-input(placeholder="비밀번호" type="password")
+  form.login-container(method="POST" action="/user/login" onSubmit="return false;")
+    .input-box.input-id
+      input.current-input(placeholder="아이디 또는 이메일" name="email")
+      p.message 아이디를 입력하세요!
+
+    .input-box.input-password
+      input.current-input(placeholder="비밀번호" type="password" name="password")
+      p.message 비밀번호를 입력하세요! 
+    
+
+    if error
+      p.message.login-error=error
+
     button.current-button.active 로그인
     ul.find 
       li
@@ -22,9 +32,23 @@ head
         a(href="#") 비밀번호 찾기
   
   footer
+    .oauth-box
+      .oauth-button
+        img(src="/static/images/facebook-logo.svg") 
+        span 페이스북으로 로그인
+      .oauth-button
+        img(src="/static/images/naver-logo.svg") 
+        span 네이버로 로그인
+      .oauth-button
+        img(src="/static/images/apple-logo.svg")
+        span Apple로 로그인
+        
     .signup-box 혹시, 배달의 민족이 처음이신가요?
       a(href="/signup/agree")
-        span 회원가입
+        span.signup-button 회원가입
+script(type="module" src="/static/js/pages/login/index.js")
+  
+
 
 
 

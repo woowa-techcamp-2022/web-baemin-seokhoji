@@ -1,6 +1,6 @@
 doctype html
 head
-  title 회원가입 서비스
+  title 배민 회원가입 서비스
   link(rel='stylesheet', href='/static/stylesheets/reset.css', type='text/css')
   link(rel='stylesheet', href='/static/stylesheets/style.css', type='text/css')
   link(rel='stylesheet', href='/static/stylesheets/main.css', type='text/css')
@@ -9,12 +9,12 @@ head
     header.header 
       span.bold.heading My배민
     img(src="/static/images/banner.png")
-    if username
-      a.user(href="#")  
+    if nickname
+      .user
         .left
           img(src="/static/images/profile.png")
-          span.user-info #{username} 님
-        span.logout 로그아웃
+          span.user-info #{nickname} 님
+        a.logout(href="/user/logout") 로그아웃
     else
       a.user(href="/login")  
         .left
