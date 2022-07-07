@@ -26,11 +26,18 @@ const validationPassword = (password) => {
 	let cnt = 0;
 
 	if (password.search(/[0-9]/g) != -1) cnt++;
-	if (password.search(/[a-z]/gi) != -1) cnt++;
-	if (password.search(/[A-Z]/gi) != -1) cnt++;
+	if (password.search(/[a-z]/g) != -1) cnt++;
+	if (password.search(/[A-Z]/g) != -1) cnt++;
 	if (password.search(/[!@#$%^&*()?_~]/g) != -1) cnt++;
 
-	return cnt >= 2 ? true : false;
+	if (cnt < 2) return false;
+
+	const repeatNumbers = password.match(/([0-9])\1+/g);
+
+	if (repeatNumbers?.every((num) => num.length >= 3)) return false;
+	if (password.search(/(012|123|234|345|456|567|678|789)/) != -1) return false;
+
+	return true;
 };
 
 const validationDate = (date) => {
