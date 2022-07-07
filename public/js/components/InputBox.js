@@ -32,6 +32,8 @@ function InputBox($inputField, validator, parser) {
 				$inputField.classList.add('invalid');
 			$inputField.classList.remove('valid');
 		}
+
+		return validate;
 	};
 
 	this.onDisable = () => {
