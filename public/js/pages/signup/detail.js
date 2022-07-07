@@ -17,6 +17,9 @@ function DetailPage($target) {
 	this.$detailForm = $target.querySelector('.detail-container');
 	this.$DetailSection = $target.querySelector('.detail-container-section');
 	this.$checkBtn = $target.querySelector('.check-btn');
+	this.$message = $target.querySelectorAll('.message')[0];
+	this.$errorMessage = $target.querySelector('.error');
+	this.$emailInput = $target.querySelector('.email-input');
 
 	this.inputList = Array.from($target.querySelectorAll('.input-box'));
 
@@ -51,11 +54,21 @@ function DetailPage($target) {
 		this.$detailForm.submit();
 	};
 
+	this.removeErrorMessage = () => {
+		if (this.$errorMessage && this.$message.style.display === 'none') {
+			this.$errorMessage.style.display = 'none';
+			this.$message.style.display = '';
+			this.$inputFieldByEmail.classList.remove('invalid');
+		}
+	};
+
 	this.init = () => {
 		this.$detailForm.addEventListener('submit', (e) => e.preventDefault());
 		this.$checkBtn.addEventListener('click', this.validateEmail);
 		this.$prevPageBtn.addEventListener('click', () => window.history.back());
 		this.$nextPageBtn.addEventListener('click', this.onClickNextPageBtn);
+		this.$emailInput?.addEventListener('focus', this.removeErrorMessage);
+		if (this.$errorMessage) this.$message.style.display = 'none';
 	};
 
 	this.$inputBoxByEmail.toggle = () => {
