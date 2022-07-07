@@ -131,3 +131,8 @@ a.single {
 	font-size: 0.8em;
 	color: #c3c3c3;
 }
+
+.logout {
+	font-size: 0.9em;
+	border: 0 !important;
+}

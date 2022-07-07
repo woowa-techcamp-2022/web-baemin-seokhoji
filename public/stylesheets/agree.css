@@ -3,11 +3,18 @@
 	display: flex;
 	flex-direction: column;
 	padding: 18px;
+	gap: 20px;
 }
 
 .agree-container .current-button {
 	margin-top: auto;
 	font-size: 1.3em;
+}
+.heading-box {
+	padding: 12px 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 input[type='checkbox'],
@@ -16,6 +23,9 @@ input[type='radio'] {
 	width: 0;
 	height: 0;
 	opacity: 0;
+}
+p.heading {
+	padding: 0;
 }
 
 .input-box {

@@ -26,14 +26,44 @@
 }
 
 footer {
+	margin-top: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	color: #939393;
+	padding: 24px;
+	gap: 18px;
 }
 
-footer span {
+footer .signup-button {
 	margin-left: 8px;
 	color: rgb(47, 182, 164);
+}
+.oauth-box {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.oauth-button {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #939393;
+	border-radius: 5px;
+	gap: 10px;
+}
+
+.oauth-button > img {
+	height: 15px;
+}
+.oauth-button > span {
+	color: black;
+}
+
+.input-box:not(:focus) ~ .login-error {
+	display: block;
 }
