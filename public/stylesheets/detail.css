@@ -63,7 +63,3 @@
 .input-box.email-field > .success {
 	right: 108px;
 }
-
-.message.server-error ~ .message {
-	display: none;
-}

@@ -1,5 +1,5 @@
 body {
-	background-color: #ededed;
+	background-color: rgb(38, 185, 198);
 	width: 100vw;
 	height: 100vh;
 	margin: 0;
@@ -13,7 +13,6 @@ body {
 div#app {
 	width: 400px;
 	height: 800px;
-	border: 1px solid black;
 	border-radius: 8px;
 	background-color: #fff;
 	display: flex;
