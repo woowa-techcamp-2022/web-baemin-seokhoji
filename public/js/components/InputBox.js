@@ -23,7 +23,6 @@ function InputBox($inputField, validator, parser) {
 	this.validate = () => {
 		const validate = validator(this.$input.value);
 
-		console.log($inputField, validate);
 		if (validate) {
 			$inputField.classList.add('valid');
 			$inputField.classList.remove('invalid');
