@@ -176,3 +176,6 @@ header > .header-icon {
 	flex-direction: column;
 	gap: 20px;
 }
+.disabled-item {
+	cursor: default;
+}

@@ -52,8 +52,14 @@
 	flex: 1;
 	background-color: #fff;
 	border: 1px solid #888;
+	color: #888;
 	border-radius: 5px;
 	padding: 5px 10px;
+	opacity: 0.5;
+	font-weight: bold;
+}
+.input-box.email-field > button:hover {
+	opacity: 1;
 }
 
 .input-box.email-field.invalid ~ .message {
