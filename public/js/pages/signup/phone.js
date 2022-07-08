@@ -42,13 +42,21 @@ function PhonePage($target) {
 
 		this.$inputForm.removeEventListener('submit', this.onSubmitForm);
 		this.$inputForm.classList.add('valid-email');
+
+		e.target.classList.add('disabled-item');
+		e.target.disabled = true;
+	};
+
+	this.refreshAuthNumber = () => {
+		this.$inputFieldByAuth.classList.remove('valid');
+		this.getRandomNumber();
 	};
 
 	this.init = () => {
-		this.$inputForm.addEventListener('submit', this.onSubmitForm);
+		this.$sendNumberBtn.addEventListener('click', this.onSubmitForm);
 		this.$prevPageBtn.addEventListener('click', () => window.history.back());
 		this.$nextPageBtn.addEventListener('click', this.onClickNextPageBtn);
-		this.$refreshBtn.addEventListener('click', () => this.getRandomNumber());
+		this.$refreshBtn.addEventListener('click', this.refreshAuthNumber);
 	};
 
 	this.$InputBoxByAuth.toggle = () => {
