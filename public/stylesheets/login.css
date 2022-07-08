@@ -67,3 +67,7 @@ footer .signup-button {
 .input-box:not(:focus) ~ .login-error {
 	display: block;
 }
+
+.input-box.invalid ~ .message {
+	display: none;
+}
