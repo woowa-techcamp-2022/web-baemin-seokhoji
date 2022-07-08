@@ -34,8 +34,9 @@ const validationPassword = (password) => {
 
 	const repeatNumbers = password.match(/([0-9])\1+/g);
 
-	if (repeatNumbers?.every((num) => num.length >= 3)) return false;
+	if (repeatNumbers?.find((num) => num.length >= 3)) return false;
 	if (password.search(/(012|123|234|345|456|567|678|789)/) != -1) return false;
+	if (password.search(/(987|876|765|654|543|432|321|210)/) != -1) return false;
 
 	return true;
 };
