@@ -23,13 +23,13 @@ function InputBox($inputField, validator, parser) {
 	this.validate = () => {
 		const validate = validator(this.$input.value);
 
+		console.log($inputField, validate);
 		if (validate) {
 			$inputField.classList.add('valid');
 			$inputField.classList.remove('invalid');
 			this.toggle();
 		} else {
-			if (this.$input.value.length > 0 || $inputField.classList.contains('valid'))
-				$inputField.classList.add('invalid');
+			$inputField.classList.add('invalid');
 			$inputField.classList.remove('valid');
 		}
 
@@ -51,8 +51,10 @@ function InputBox($inputField, validator, parser) {
 		this.$input.addEventListener('focus', () => $inputField.classList.add('focus'));
 		window.addEventListener('click', (e) => {
 			if (e.target === this.$input || e.target === this.$closeButton) return;
-			$inputField.classList.remove('focus');
-			this.validate();
+			if ($inputField.classList.contains('focus')) {
+				this.validate();
+				$inputField.classList.remove('focus');
+			}
 		});
 		this.$closeButton?.addEventListener('click', this.clearInput);
 	};
