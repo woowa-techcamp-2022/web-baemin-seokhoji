@@ -1,0 +1,71 @@
+.header > .next {
+	position: absolute;
+	top: 18px;
+	right: 18px;
+}
+
+.header > .next:not(.disabled-text) {
+	color: rgb(47, 182, 164);
+	cursor: pointer;
+}
+
+.detail-container {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	padding: 18px;
+}
+
+.detail-container-section {
+	display: none;
+	flex-direction: column;
+
+	gap: 50px;
+}
+
+.detail-container-item > .title {
+	font-weight: bold;
+	color: rgb(138, 138, 138);
+}
+
+.input-box > .success {
+	display: block;
+	border: solid #ccc;
+	border-width: 0 2px 2px 0;
+}
+
+.input-box.valid > .success {
+	border: solid rgb(47, 182, 164);
+	border-width: 0 2px 2px 0;
+}
+
+.input-box.email-field {
+	display: flex;
+	gap: 15px;
+}
+
+.input-box.email-field > input {
+	flex: 4;
+}
+
+.input-box.email-field > button {
+	flex: 1;
+	background-color: #fff;
+	border: 1px solid #888;
+	color: #888;
+	border-radius: 5px;
+	padding: 5px 10px;
+	opacity: 0.5;
+	font-weight: bold;
+}
+.input-box.email-field > button:hover {
+	opacity: 1;
+}
+
+.input-box.email-field.invalid ~ .message {
+	display: block;
+}
+
+.input-box.email-field > .success {
+	right: 108px;
+}

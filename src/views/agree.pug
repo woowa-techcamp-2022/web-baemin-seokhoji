@@ -1,0 +1,72 @@
+doctype html
+head
+  title 회원가입
+  link(rel='stylesheet', href='/static/stylesheets/reset.css', type='text/css')
+  link(rel='stylesheet', href='/static/stylesheets/style.css', type='text/css')
+  link(rel='stylesheet', href='/static/stylesheets/agree.css', type='text/css')
+
+#app
+  header.header
+    a.prev(href="/")
+      img.close(src="/static/images/cancel.svg")
+    span.bold.heading 회원가입
+
+  section.agree-container 
+    .heading-box
+      p.bold.heading 어서오세요 
+      p.bold.heading 약관동의가 필요해요
+
+    form.agree-form
+      .input-box.all-check
+        input(type="checkbox" class="agree-all" name="agree-all")
+        span.mark
+        span.bold 전체동의
+      .driver
+      section.input-form
+        .input-box 
+          input(type="checkbox" class="agree must-selected")
+          span.mark
+          span 배달의민족 이용약관 동의
+          img(src="/static/images/arrow.png")
+
+        .input-box 
+          input(type="checkbox" class="agree must-selected")
+          span.mark
+          span 전자금융거래 이용약관 동의
+          img(src="/static/images/arrow.png")
+        .input-box 
+          input(type="checkbox" class="agree must-selected")
+          span.mark
+          span 개인정보 수집이용 동의
+          img(src="/static/images/arrow.png")
+
+        .input-box 
+          input(type="checkbox" class="agree")
+          span.mark
+          span 개인정보 제3자 제공 동의 (선택)
+          img(src="/static/images/arrow.png")
+
+        .input-box 
+          input(type="checkbox" class="agree")
+          span.mark
+          span 마케팅 정보 메일, SMS 수신 동의 (선택)
+      .driver
+      section.age-box 
+        .age-item
+          input(type="radio" name="age_check" checked) 
+          span.mark-radio
+          .detail
+            span.bold 만 14세 이상입니다.
+          img(src="/static/images/over.png")
+        .age-item
+          input(type="radio" name="age_check")
+          span.mark-radio
+          .detail
+            span.bold 만 14세 미만입니다 
+            p.desc 본인확인이 된 보호자의 배민계정이 필요해요.
+          img(src="/static/images/under.png")
+
+    button.current-button(disabled="true") 다음으로
+
+  script(type="module" src="/static/js/pages/signup/agree.js")
+    

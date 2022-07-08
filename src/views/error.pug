@@ -1,0 +1,13 @@
+doctype html
+head
+  title #{status}에러
+  link(rel='stylesheet', href='/static/stylesheets/reset.css', type='text/css')
+  link(rel='stylesheet', href='/static/stylesheets/style.css', type='text/css')
+
+#app
+  .error-page-container
+    p #{status} 에러 페이지입니다.
+    p 에러내용: #{error}
+
+
+    

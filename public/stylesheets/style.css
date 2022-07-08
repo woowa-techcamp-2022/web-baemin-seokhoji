@@ -1,0 +1,181 @@
+body {
+	background-color: rgb(38, 185, 198);
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	font-family: 'Noto Sans KR';
+}
+
+div#app {
+	width: 400px;
+	height: 800px;
+	border-radius: 8px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header > .header-icon {
+	position: absolute;
+}
+
+.input-box {
+	position: relative;
+	width: 100%;
+}
+
+.current-input {
+	width: 100%;
+	padding: 12px 2px;
+	border: 0;
+	border-bottom: 1px solid rgb(226, 226, 226);
+	font-size: 0.9em;
+}
+.current-input:focus-visible {
+	border-bottom: 1px solid rgb(155, 155, 155);
+}
+
+.current-input::placeholder {
+	color: rgb(210, 210, 210);
+}
+.current-input:disabled {
+	background-color: rgb(222, 231, 255);
+}
+
+.current-button {
+	width: 100%;
+	border: 0;
+	color: #fff;
+	font-size: 1.1em;
+	background-color: #bdbdbd;
+	padding: 14px;
+	border-radius: 5px;
+}
+
+.current-button.active:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.current-input:focus-visible {
+	outline: none;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.heading {
+	font-size: 20px;
+	padding: 18px 0;
+}
+
+.error-text {
+	color: red;
+}
+
+.error-bold {
+	border-bottom: 1px solid red;
+}
+
+.header > .prev {
+	position: absolute;
+	cursor: pointer;
+	top: 18px;
+	left: 18px;
+}
+
+.close {
+	width: 18px;
+	height: 18px;
+}
+
+.driver {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	margin: 1rem 0;
+}
+
+.disabled-text {
+	color: rgb(161, 161, 161);
+}
+
+.active {
+	background-color: rgb(47, 182, 164);
+}
+
+.close-input {
+	display: none;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 12px;
+	right: 2px;
+	cursor: pointer;
+}
+
+.focus > .close-input {
+	display: block;
+}
+
+.close-input:hover {
+	opacity: 0.8;
+}
+
+.success {
+	display: none;
+	position: absolute;
+	top: 11px;
+	right: 6px;
+	width: 8px;
+	height: 13px;
+	border: solid rgb(47, 182, 164);
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+.input-box:not(.focus).valid > .success {
+	display: block;
+	border: solid rgb(47, 182, 164);
+	border-width: 0 2px 2px 0;
+}
+
+.input-box.invalid input {
+	border-bottom: 1px solid red;
+}
+
+.message {
+	display: none;
+	margin-top: 10px;
+	font-size: 0.8em;
+	color: red;
+}
+
+.input-box.invalid > .message {
+	display: block;
+}
+
+.error-page-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 20px;
+}
+.disabled-item {
+	cursor: default;
+}
