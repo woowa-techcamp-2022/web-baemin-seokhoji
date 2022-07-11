@@ -91,6 +91,15 @@
 회원가입: 모든 정보가 올바르게 입력됐을 경우 상단 Header 저장 버튼 활성화 및 회원가입 로직 실행
 
 
+<br />
+
+### 기능
+
+<br />
+
+- bcrypt를 통한 Paasword 암호화
+- express-session을 통한 로그인 세션 유지
+- express middleware울 통해 세션을 검사, 회원가입 및 로그인 페이지 이동시 메인 페이지로 강제 라우팅
 
 
 
